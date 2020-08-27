@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Calculadora</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col">Calculadora</div>
-            </div>
+
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">Calculadora</div>
         </div>
-    </body>
-    <script src="sato-calculadora.js"></script>
+        <div class="row">
+            <div id='visor' class="col border"></div>
+        </div>
+        <div class="row row-cols-4">
+            <div onclick='cambiarValor(1)' class="col border">1</div>
+            <div onclick='cambiarValor(2)' class="col border">2</div>
+            <div onclick='cambiarValor(3)' class="col border">3</div>
+            <div onclick="agregarOperador('+')" class="col border">+</div>
+
+            <div onclick='cambiarValor(4)' class="col border">4</div>
+            <div onclick='cambiarValor(5)' class="col border">5</div>
+            <div onclick='cambiarValor(6)' class="col border">6</div>
+            <div onclick="agregarOperador('-')" class="col border">-</div>
+
+            <div onclick='cambiarValor(7)' class="col border">7</div>
+            <div onclick='cambiarValor(8)' class="col border">8</div>
+            <div onclick='cambiarValor(9)' class="col border">9</div>
+            <div onclick="agregarOperador('*')" class="col border">*</div>
+
+            <div onclick='cambiarValor(0)' class="col-6 border">0</div>
+            <div onclick="calcular()" class="col border">=</div>
+            <div onclick="agregarOperador('/')" class="col border">/</div>
+        </div>
+    </div>
+</body>
+<script src="sato-calculadora.js"></script>
+
 </html>
