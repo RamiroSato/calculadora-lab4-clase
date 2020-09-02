@@ -6,10 +6,9 @@ var operador;
 var resultado = "";
 
 function cambiarValor(numeroSeleccionado) {
-
-    if(!numero1){
-        visor.innerHTML = "";
-    }
+  if (!numero1) {
+    visor.innerHTML = "";
+  }
   if (operador) {
     numero2 += numeroSeleccionado;
   } else numero1 += numeroSeleccionado;
@@ -20,9 +19,11 @@ function cambiarValor(numeroSeleccionado) {
 }
 
 function agregarOperador(operadorSeleccionado) {
+  if(!operador){
   operador = operadorSeleccionado;
   console.log("operador: ", operador);
   visor.innerHTML += `${operadorSeleccionado}`;
+  }
 }
 
 function calcular() {
@@ -50,8 +51,12 @@ function calcular() {
   limpiarVariabes();
 }
 
-function limpiarVariabes(){
-    numero1 = '';
-    numero2 = '';
-    operador = '';
+function limpiarVariabes() {
+  numero1 = "";
+  numero2 = "";
+  operador = "";
+}
+function limpiarTodo(){
+limpiarVariabes();
+visor.innerHTML="";
 }
